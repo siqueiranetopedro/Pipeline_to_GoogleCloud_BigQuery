@@ -2,126 +2,97 @@
 
 **Author:** Pedro Siqueira
 
-## Project Overview
+## About This Project
 
-This repository contains a production-ready ETL (Extract, Transform, Load) pipeline built with Python and Google Cloud Platform. The pipeline demonstrates enterprise-level data engineering capabilities by processing sales data from CSV files through to analytics-ready tables in BigQuery.
+I built this ETL pipeline to learn how to work with Google Cloud Platform and process real data in the cloud. This project helped me understand how modern data systems work and how to build something that can handle business data at scale.
 
-## Technical Architecture
+## What It Does
 
-The pipeline follows modern cloud-native design principles:
+The pipeline takes sales data from CSV files and processes it through Google Cloud:
 
 ```
-Source Data (CSV) → Python Processing → Cloud Storage → BigQuery → Business Analytics
+CSV File → Python Processing → Cloud Storage → BigQuery → Analytics
 ```
 
-**Key Components:**
-- **Extraction Layer**: Pandas-based CSV processing with data validation
-- **Transformation Layer**: Business logic implementation and data quality checks  
-- **Storage Layer**: Google Cloud Storage for data lake functionality
-- **Analytics Layer**: BigQuery data warehouse for SQL-based analysis
-- **Security Layer**: Service account authentication with IAM controls
+**The process:**
+1. **Extract** - Reads data from CSV files and validates it
+2. **Transform** - Cleans the data and adds calculated fields using pandas
+3. **Load** - Saves data to Google Cloud Storage and BigQuery
+4. **Analyze** - Runs SQL queries to get business insights
 
-## Technologies and Tools
+## Tools I Used
 
-- **Python 3.x** - Core development language
-- **Pandas** - Data manipulation and transformation
-- **Google Cloud Storage** - Scalable object storage for data lake
-- **Google BigQuery** - Serverless data warehouse platform
-- **Google Cloud IAM** - Identity and access management
-- **Git** - Version control and collaboration
+- **Python** - Main programming language for the pipeline
+- **Pandas** - For cleaning and transforming the data
+- **Google Cloud Storage** - To store the processed files
+- **BigQuery** - Google's data warehouse for running queries
+- **Google Cloud IAM** - For secure authentication
 
-## Features Implemented
+## What I Learned
+
+**Working with Cloud Services:**
+- How to set up and use Google Cloud Storage buckets
+- Creating and managing BigQuery datasets and tables
+- Setting up proper authentication with service accounts
+- Handling errors when working with cloud APIs
 
 **Data Processing:**
-- Automated CSV file ingestion with schema validation
-- Data transformation including calculated fields and date parsing
-- Comprehensive error handling and logging throughout pipeline
-- Data quality validation with null value detection
+- Reading and validating CSV data with pandas
+- Adding business logic to transform raw data
+- Creating automated data quality checks
+- Building reusable code that handles different data sources
 
-**Cloud Integration:**
-- Dynamic bucket creation in Google Cloud Storage
-- Automated BigQuery dataset and table provisioning
-- Service account authentication for secure cloud access
-- Timestamped file naming for version control
+**Real Results:**
+The pipeline processed actual sales data and found some interesting insights:
+- Europe: $2,909.94 in total sales (our best market)
+- North America: $2,569.83 in sales
+- Asia: $1,869.92 in sales
 
-**Analytics Capabilities:**
-- SQL-based business intelligence queries
-- Regional sales performance analysis
-- Product performance ranking and metrics
-- Real-time data availability for business decisions
+Top selling products were laptops, furniture, and electronics.
 
-## Business Results
+## How to Run It
 
-The pipeline processes sales transactions and generates actionable insights:
+**What you need:**
+- Python 3.x with pandas installed
+- A Google Cloud account
+- Service account credentials (JSON file)
+- BigQuery and Cloud Storage enabled in your project
 
-**Regional Performance Analysis:**
-- Europe: $2,909.94 total revenue (highest performing market)
-- North America: $2,569.83 total revenue  
-- Asia: $1,869.92 total revenue
-
-**Product Performance Metrics:**
-- Top revenue generator: Laptop ($2,499.99 from 2 orders)
-- High-value single transactions: Sofa ($899.99), Smartphone ($799.99)
-- Multi-unit sales optimization: Monitor and Desk Chair categories
-
-## Implementation Details
-
-**File Structure:**
-```
-pipeline_to_GC.py          # Main ETL pipeline implementation
-README.md                  # Project documentation
-```
-
-**Pipeline Execution:**
+**To run:**
 ```bash
 python3 pipeline_to_GC.py
 ```
 
-**Prerequisites:**
-- Python 3.x with pandas library
-- Google Cloud Platform account with billing enabled
-- Service account credentials (JSON file)
-- BigQuery and Cloud Storage APIs enabled
+## Code Structure
 
-## Skills Demonstrated
+The main file `pipeline_to_GC.py` contains:
+- `CloudETLPipeline` class that handles all the processing
+- Methods for extracting, transforming, and loading data
+- Error handling for when things go wrong
+- SQL queries for generating business reports
 
-**Data Engineering:**
-- ETL pipeline design and implementation
-- Data warehouse architecture and modeling
-- Cloud-native application development
-- Production-ready error handling and logging
+## What This Project Shows
 
-**Google Cloud Platform:**
-- BigQuery data warehouse implementation
-- Cloud Storage integration for data lake architecture
-- IAM security configuration and service accounts
-- Serverless computing and auto-scaling capabilities
+- I can work with cloud platforms like Google Cloud
+- I understand how to build data pipelines that process real business data
+- I know how to write Python code that's reliable and handles errors
+- I can create systems that turn raw data into useful business insights
 
-**Software Development:**
-- Object-oriented programming with Python
-- Professional code documentation and commenting
-- Git version control and collaborative development
-- Enterprise software development practices
+## Next Steps
 
-## Performance and Scalability
+Things I want to add in the future:
+- Schedule the pipeline to run automatically
+- Add more data sources like APIs or databases
+- Create better monitoring and alerts
+- Build a dashboard to visualize the results
 
-The pipeline architecture supports:
-- Horizontal scaling through cloud-native services
-- Sub-second query response times in BigQuery
-- Automatic schema detection and table provisioning
-- Zero-maintenance serverless infrastructure
+## Connection
 
-## Future Enhancements
+This project builds on my previous work with Excel and APIs that you can see here: https://github.com/siqueiranetopedro/Pipelines_Excel-API
 
-Potential improvements for production deployment:
-- Apache Airflow integration for workflow orchestration
-- Real-time streaming data processing with Pub/Sub
-- Advanced monitoring and alerting with Cloud Operations
-- Multi-environment deployment with Infrastructure as Code
+Feel free to look at the code and reach out if you have questions about how it works.
 
-## Contact
+---
 
-Pedro Siqueira  
-Data Engineer | Python Developer | Cloud Architect
-
-This project demonstrates practical experience with modern data engineering tools and cloud platforms, suitable for enterprise-level data processing requirements.
+**Pedro Siqueira**  
+Learning data engineering and cloud technologies
