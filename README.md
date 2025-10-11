@@ -4,7 +4,7 @@
 
 ## About This Project
 
-I built this ETL pipeline to learn how to work with Google Cloud Platform and process real data in the cloud. This project helped me understand how modern data systems work and how to build something that can handle business data at scale.
+I built this ETL pipeline to learn how to work with Google Cloud Platform and process real data in the cloud. 
 
 ## What It Does
 
@@ -41,8 +41,6 @@ CSV File → Python Processing → Cloud Storage → BigQuery → Analytics
 - Adding business logic to transform raw data
 - Creating automated data quality checks
 - Building reusable code that handles different data sources
-
-## How to Run It
 
 **What you need:**
 - Python 3.x with pandas installed
