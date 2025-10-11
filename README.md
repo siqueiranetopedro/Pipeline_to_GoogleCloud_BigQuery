@@ -42,14 +42,6 @@ CSV File → Python Processing → Cloud Storage → BigQuery → Analytics
 - Creating automated data quality checks
 - Building reusable code that handles different data sources
 
-**Real Results:**
-The pipeline processed actual sales data and found some interesting insights:
-- Europe: $2,909.94 in total sales (our best market)
-- North America: $2,569.83 in sales
-- Asia: $1,869.92 in sales
-
-Top selling products were laptops, furniture, and electronics.
-
 ## How to Run It
 
 **What you need:**
@@ -58,11 +50,6 @@ Top selling products were laptops, furniture, and electronics.
 - Service account credentials (JSON file)
 - BigQuery and Cloud Storage enabled in your project
 
-**To run:**
-```bash
-python3 pipeline_to_GC.py
-```
-
 ## Code Structure
 
 The main file `pipeline_to_GC.py` contains:
@@ -70,13 +57,6 @@ The main file `pipeline_to_GC.py` contains:
 - Methods for extracting, transforming, and loading data
 - Error handling for when things go wrong
 - SQL queries for generating business reports
-
-## What This Project Shows
-
-- I can work with cloud platforms like Google Cloud
-- I understand how to build data pipelines that process real business data
-- I know how to write Python code that's reliable and handles errors
-- I can create systems that turn raw data into useful business insights
 
 ## Next Steps
 
