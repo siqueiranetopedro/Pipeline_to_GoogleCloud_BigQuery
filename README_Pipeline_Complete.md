@@ -23,6 +23,12 @@ BigQuery Data Warehouse
 Looker Studio Dashboard
 ```
 
+## Dashboard Preview
+
+![Dashboard Screenshot](dashboard_screenshot.png)
+
+*Live interactive dashboard showing sales data across regions with geographic visualization and detailed product analytics*
+
 ## Data Flow Process
 
 ### 1. Data Source
