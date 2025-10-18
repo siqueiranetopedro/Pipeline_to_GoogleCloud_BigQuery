@@ -25,7 +25,8 @@ Looker Studio Dashboard
 
 ## Dashboard Preview
 
-![Dashboard Screenshot](dashboard_screenshot.png)
+<img width="2398" height="1658" alt="image" src="https://github.com/user-attachments/assets/756744f3-60df-4158-83d2-a6f59e2a201d" />
+
 
 *Live interactive dashboard showing sales data across regions with geographic visualization and detailed product analytics*
 
